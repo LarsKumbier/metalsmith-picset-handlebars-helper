@@ -23,8 +23,8 @@ Use handlebars helper to create srcsets with something like `{{picset anthony 50
 Outputs something like
 
 ```
-	<picture>
-		<source type="image/webp" srcset="img/srcsets/anthony-2000.webp 2000w, img/srcsets/anthony-1000.webp 1000w, img/srcsets/anthony-500.webp 500w, img/srcsets/anthony-250.webp 250w, img/srcsets/anthony-125.webp 125w">
-		<img src="img/srcsets/anthony-500.jpg" srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w, img/srcsets/anthony-250.jpg 250w, img/srcsts/anthony-125.jpg 125w" alt="Anthony's Face" />
-	</picture>
+<picture>
+	<source type="image/webp" srcset="img/srcsets/anthony-2000.webp 2000w, img/srcsets/anthony-1000.webp 1000w, img/srcsets/anthony-500.webp 500w, img/srcsets/anthony-250.webp 250w, img/srcsets/anthony-125.webp 125w">
+	<img src="img/srcsets/anthony-500.jpg" srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w, img/srcsets/anthony-250.jpg 250w, img/srcsts/anthony-125.jpg 125w" alt="Anthony's Face" />
+</picture>
 ```
