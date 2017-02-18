@@ -81,3 +81,6 @@ Generates `<picture>` elements with:
 * [Don’t use \<picture\> (most of the time)](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/)
 * [Using the picture element to load WebP images with fallback](https://walterebert.com/blog/using-the-picture-element-to-load-webp-images-with-fallback/)
 
+### Implementation
+
+* Implemented on Node v6.9.1, untested in other versions
