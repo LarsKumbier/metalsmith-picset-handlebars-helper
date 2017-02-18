@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper/issues"
   },
-  "homepage": "https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper#readme"
+  "homepage": "https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
