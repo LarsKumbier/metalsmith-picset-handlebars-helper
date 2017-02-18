@@ -33,3 +33,9 @@ Which will output something like
 	<img src="img/srcsets/anthony-500.jpg" srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w, img/srcsets/anthony-250.jpg 250w, img/srcsts/anthony-125.jpg 125w" alt="Anthony's Face" />
 </picture>
 ```
+
+### Inspiration
+
+* [Responsive Images: If you’re just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
+* [Don’t use <picture> (most of the time)](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/)
+* [Using the picture element to load WebP images with fallback](https://walterebert.com/blog/using-the-picture-element-to-load-webp-images-with-fallback/)
