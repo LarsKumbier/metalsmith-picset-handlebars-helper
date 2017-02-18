@@ -41,7 +41,7 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 
 **path**
 
-* Relative to **source** folder
+* Relative to Metalsmith **source** folder
 * Default: `img/picsets/`
 
 **Helper use**
