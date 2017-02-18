@@ -12,7 +12,7 @@ Files
 const picsetHandlearsHelper = require('metalsmith-picset-handlebars-helper')
 Metalsmith(__dirname)
 	.use(picsetHandlearsHelper({path: '/img/picsets/'}))
-	.build(function(err) {})
+	.build(function() {})
 ```
 
 Assume
