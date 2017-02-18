@@ -68,11 +68,12 @@ Generates `<picture>` elements with:
 
 * Give the browser all availble choices
 * Simple case of resizing only (not artistic decisions)
+ * No implementation for `size="..."`, though it could be added to this later
 * Reduce bandwidth bloat and keep high quality:
  1. `.webp` is first choice
  1. Responsive size is first choice
  1. Always give fallbacks
-* Standards based
+* Standards based (Using `<picture>` with inner `<img src="...">` fallback)
 
 ### Inspiration
 
