@@ -12,7 +12,7 @@ Add to your pipeline like
 const picsetHandlearsHelper = require('metalsmith-picset-handlebars-helper')
 Metalsmith(__dirname)
 	...
-	.use(picsetHandlearsHelper({path: '/img/picsets/'}))
+	.use(picsetHandlearsHelper())
 	...
 ```
 
@@ -31,7 +31,22 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 ```
 ### Specification
 
-Use helper like `{{picset NAME DEFAULT_WIDTH ALT_TAG}}`
+#### Options object
+
+```
+{
+	path: 'img/picsets'
+}
+```
+
+**path**
+
+* Relative to **source** folder
+* Default: `img/picsets/`
+
+**Helper use**
+
+Like `{{picset NAME DEFAULT_WIDTH ALT_TAG}}`
 
  * Parameter 1 (NAME): Image source name
  * Parameter 2 (DEFAULT_WIDTH): Default width
