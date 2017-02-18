@@ -36,7 +36,7 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 
  * You have a **handlebars** package installed somewhere either directly or as a sub-dependency (We use that same version / install)
 
-### Metamsmith options object
+### Metalsmith options object
 
 ```
 {
