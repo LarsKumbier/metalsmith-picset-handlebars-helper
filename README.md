@@ -9,7 +9,7 @@ Files
 `npm i metalsmith-picset-handlebars-helper --save`
 
 ```
-const picsetGenerate = require('metalsmith-picset-handlebars-helper')
+const picsetGenerate = require('metalsmith-picset-generate')
 Metalsmith(__dirname)
 	.use(picsetGenerate({path: '/img/picsets/'}))
 	.build(function(err) {})
