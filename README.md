@@ -17,7 +17,7 @@ Metalsmith(__dirname)
 
 Assume
  * `/img/picsets/anthony_80webp_90jpg_2000,1000,500,250,125.jpg` as a 2000px wide 90% quality photo
- * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) already called earlier
+ * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) used earlier in metalsmith pipeline
 
 Then use handlebars helper like `{{picset anthony 500 "Anthony's Face"}}`
 
@@ -25,9 +25,7 @@ Then use handlebars helper like `{{picset anthony 500 "Anthony's Face"}}`
  * Parameter 2: Default width
  * Parameter 3: Optional alt tag
 
-### Example effect
-
-Outputs something like
+Which will output something like
 
 ```
 <picture>
