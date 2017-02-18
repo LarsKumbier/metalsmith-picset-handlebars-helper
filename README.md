@@ -31,7 +31,7 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 ```
 ## Specification
 
-### Options object
+### Metamsmith options object
 
 ```
 {
@@ -60,12 +60,14 @@ Generates `<picture>` elements with:
  * `srcset` with file type of `.jpg`, `.png`, or `.svg` as a fallback
  * `src` at default width and same file type as it's srcset
 
-## Inspiration
+## Background info
+
+### Inspiration
 
 * [Responsive Images: If you’re just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
 * [Don’t use \<picture\> (most of the time)](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/)
 * [Using the picture element to load WebP images with fallback](https://walterebert.com/blog/using-the-picture-element-to-load-webp-images-with-fallback/)
 
-## Philosophy
+### Philosophy
 
 [Convention over Configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)
