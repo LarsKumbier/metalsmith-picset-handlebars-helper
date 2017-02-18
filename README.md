@@ -12,6 +12,7 @@ Metalsmith(__dirname)
 ```
 
 Assume
+
  * `/img/picsets/anthony_80webp_90jpg_2000,1000,500,250,125.jpg` as a 2000px wide 90% quality photo
  * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) used earlier in metalsmith pipeline
 
@@ -29,9 +30,15 @@ Which will output something like
 	<img src="img/srcsets/anthony-500.jpg" srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w, img/srcsets/anthony-250.jpg 250w, img/srcsts/anthony-125.jpg 125w" alt="Anthony's Face" />
 </picture>
 ```
-### Implementation
+### Specification
 
-Reads files in `path` assumed to follow [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate)'s convention to generate an optomized `<picture>` tag.
+Generates `<picture>` elements with:
+
+* `srcset` parameters that include all files found following [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate)'s naming convention
+* `<source>` with `.webp` type in `srcset`
+* `<img>` with:
+ * `srcset` with file type of `.jpg`, `.png`, or `.svg` as a fallback
+ * `src` at default width and same file type as it's srcset
 
 ### Inspiration
 
