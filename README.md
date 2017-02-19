@@ -19,7 +19,7 @@ Metalsmith(__dirname)
 Assume
 
  * You have a **handlebars** package installed somewhere either directly or as a sub-dependency (We use that same version / install)
- * `/img/picsets/anthony_80webp_90jpg_2000,1000,500,250,125.jpg` as a 2000px wide 90% quality photo
+ * `/img/picset/anthony_80webp_90jpg_2000,1000,500,250,125.jpg` as a 2000px wide 90% quality photo
  * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) is used earlier in your metalsmith pipeline
 
 Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to output something like
@@ -40,14 +40,14 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 
 ```
 {
-	path: 'img/picsets'
+	path: 'img/picset'
 }
 ```
 
 **path**
 
 * Relative to Metalsmith **source** folder
-* Default: `img/picsets/`
+* Default: `img/picset/`
 
 **Helper use**
 
