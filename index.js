@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-function plugin(opts) {
+module.exports = (opts) => {
 	return function(files, metalsmith, done) {
 		/*
 		console.log('Inside: metalsmith-picset-handlebars-helper')
@@ -14,5 +14,3 @@ function plugin(opts) {
 		setImmediate(done)
 	}
 }
-
-module.exports = plugin
