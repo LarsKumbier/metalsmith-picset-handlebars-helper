@@ -42,7 +42,7 @@ function getPicsets(msFilenames, msPicsetPath) {
 	// Cleanup
 	_.forEach(picsets, (picset, picsetName) => {
 		picsets[picsetName].widths = _.uniq(picset.widths).sort((a, b) => a > b)
-		picsets[picsetName].filesname = picset.filenames.sort()
+		picsets[picsetName].filenames = picset.filenames.sort()
 	})
 	return picsets
 }
