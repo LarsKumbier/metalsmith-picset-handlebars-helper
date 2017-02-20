@@ -24,7 +24,7 @@ Assume
  * `/img/picset/anthony_80webp_90jpg_2000,1000,500,250,125.jpg` as a 2000px wide 90% quality photo
  * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) is used earlier in your metalsmith pipeline
 
-Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to output something like
+Then use the handlebars helper like `{{{picset "anthony" 500 "Anthony's Face"}}}` to output something like
 
 ```html
 <picture>
@@ -53,7 +53,7 @@ Then use the handlebars helper like `{{picset anthony 500 "Anthony's Face"}}` to
 
 **Helper use**
 
-Like `{{picset NAME DEFAULT_WIDTH ALT_TAG}}`
+Like `{{{picset NAME DEFAULT_WIDTH ALT_TAG}}}`
 
  * Parameter 1 (NAME): Image source name
  * Parameter 2 (DEFAULT_WIDTH): Default width
