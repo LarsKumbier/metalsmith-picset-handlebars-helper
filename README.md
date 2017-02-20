@@ -51,11 +51,12 @@ Then use the handlebars helper like `{{{picset "anthony" 500}}}` to output somet
 
 **Helper use**
 
-Like `{{{picset NAME DEFAULT_WIDTH ALT_TAG}}}`
+Like `{{{picset NAME DEFAULT_WIDTH SIZES ALT}}}`
 
  * Parameter 1 (NAME): Image source name
  * Parameter 2 (DEFAULT_WIDTH): Default width
- * Parameter 3 (ALT_TAG): Optional alt tag
+ * Parameter 3 (SIZES): Optional sizes
+ * Parameter 4 (ALT): Optional alt tag
 
 Generates `<picture>` elements with:
 
@@ -64,6 +65,7 @@ Generates `<picture>` elements with:
 * `<img>` with:
  * `srcset` with file type of `.jpg`, `.png`, or `.svg` as a fallback
  * `src` at default width and same file type as it's srcset
+* `sizes` attribute as specified duplicated on both the `<source>` and `<img ...>` tags
 
 ## Background info
 

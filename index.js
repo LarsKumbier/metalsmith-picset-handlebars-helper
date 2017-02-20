@@ -61,7 +61,7 @@ module.exports = (options) => {
 	return function(files, metalsmith, done) {
 		const picsets = getPicsets(_.keys(files), opts.path)
 
-		handlebars.registerHelper('picset', (name, defaultWidth, alt) => {
+		handlebars.registerHelper('picset', (name, defaultWidth, sizes, alt) => {
 			const picset = picsets[name]
 
 			// Ensure default width exists
@@ -75,13 +75,13 @@ module.exports = (options) => {
 			// WebP format
 			ret += '<source type="image/webp" srcset="'
 			ret += srcset(opts.path, name, picset.widths, 'webp')
-			ret += '">'
+			ret += `" sizes="${sizes}">`
 
 			// Img fallack
 			const filename = `/${opts.path}/${name}-${defaultWidth}.${picset.fallbackExt}`
 			ret += `<img src="${filename}" srcset="'`
 			ret += srcset(opts.path, name, picset.widths, picset.fallbackExt)
-			ret += `" alt="${alt}" />`
+			ret += `" sizes="${sizes}" alt="${alt}" />`
 
 			ret += '</picture>'
 
