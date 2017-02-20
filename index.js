@@ -68,6 +68,9 @@ module.exports = (options) => {
 
 		handlebars.registerHelper('picset', (name, defaultWidth, sizes, alt) => {
 			const picset = picsets[name]
+			if (!picset) {
+				throw new Error(`Couldn't find picset "${name}". Is it in ${opts.path}?`)
+			}
 
 			// Ensure default width exists
 			// * It's easy for developer to mismatch filename params and handlebar param
