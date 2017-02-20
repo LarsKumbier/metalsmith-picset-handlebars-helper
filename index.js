@@ -3,16 +3,22 @@ const _ = require('lodash')
 
 function getPicsets(msFilenames, msPicsetPath) {
 	const picsets = {}
-	const src = new RegExp(`^${msPicsetPath}/`)
+
+	const reParam = '_[0-9,]+[a-z]+'
+	const reName = '[a-zA-Z-]*'
+	const reExt = 'jpg|png|webp'
+	const rePathPrefix = new RegExp(`${msPicsetPath}/`)
+	const rePic = new RegExp(`${msPicsetPath}/(${reName}).*(${reParam})*.*\\.(${reExt})`)
 
 	_.forEach(msFilenames, (pathedFilename) => {
-		// Skip non matching
-		if (!pathedFilename.match(src)) {
+		// Ensure it's a picset picture
+		// * Sometimes things like Thumbs.db will try to sneak in
+		if (!pathedFilename.match(rePic)) {
 			return
 		}
 
 		// Extract basic information
-		const filename = pathedFilename.replace(src, '')
+		const filename = pathedFilename.replace(rePathPrefix, '')
 		const picsetName = filename.substr(0, filename.lastIndexOf('-'))
 		const width = Number(filename.match(/.*-([0-9]+).[A-z]+/)[1])
 		const ext = filename.substr(filename.lastIndexOf('.') + 1)
