@@ -1,5 +1,3 @@
-// TODO: Refactor, rename, etc everything in this file as needed
-
 const handlebars = require('handlebars')
 const _ = require('lodash')
 
