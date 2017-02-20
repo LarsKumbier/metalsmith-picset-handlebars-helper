@@ -71,6 +71,9 @@ module.exports = (options) => {
 			if (!picset) {
 				throw new Error(`Couldn't find picset "${name}". Is it in ${opts.path}?`)
 			}
+			if (!sizes) {
+				sizes="100vw"
+			}
 
 			// Ensure default width exists
 			// * It's easy for developer to mismatch filename params and handlebar param
