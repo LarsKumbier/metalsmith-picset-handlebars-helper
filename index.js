@@ -44,7 +44,8 @@ function getPicsets(msFilenames, msPicsetPath) {
 }
 
 function srcset(path, name, widths, ext) {
-	return _.map(widths, (width) => `/${path}/${name}-${width}.webp ${width}w`).join(',')
+	return _.map(widths, (width) =>
+		`/${path}/${name}-${width}.${ext} ${width}w`).join(',')
 }
 
 function defaultExistsIn(picset, width) {
@@ -75,11 +76,11 @@ module.exports = (options) => {
 			// WebP format
 			ret += '<source type="image/webp" srcset="'
 			ret += srcset(opts.path, name, picset.widths, 'webp')
-			ret += `" sizes="${sizes}">`
+			ret += `" sizes="${sizes}" />`
 
 			// Img fallack
 			const filename = `/${opts.path}/${name}-${defaultWidth}.${picset.fallbackExt}`
-			ret += `<img src="${filename}" srcset="'`
+			ret += `<img src="${filename}" srcset="`
 			ret += srcset(opts.path, name, picset.widths, picset.fallbackExt)
 			ret += `" sizes="${sizes}" alt="${alt}" />`
 
