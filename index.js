@@ -79,7 +79,7 @@ module.exports = (options) => {
 
 			// Img fallack
 			const filename = `/${opts.path}/${name}-${defaultWidth}.${picset.fallbackExt}`
-			ret += `<img src="${filename}" srcset=""'`
+			ret += `<img src="${filename}" srcset="'`
 			ret += srcset(opts.path, name, picset.widths, picset.fallbackExt)
 			ret += `" alt="${alt}" />`
 
