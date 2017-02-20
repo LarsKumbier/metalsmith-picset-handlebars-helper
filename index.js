@@ -81,7 +81,7 @@ module.exports = (options) => {
 			const filename = `/${opts.path}/${name}-${defaultWidth}.${picset.fallbackExt}`
 			ret += `<img src="${filename}" srcset=""'`
 			ret += srcset(opts.path, name, picset.widths, picset.fallbackExt)
-			ret += `" alt="${alt}" />"`
+			ret += `" alt="${alt}" />`
 
 			ret += '</picture>'
 
