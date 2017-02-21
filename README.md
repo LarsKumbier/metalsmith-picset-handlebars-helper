@@ -28,7 +28,7 @@ Then use the handlebars helper like `{{{picset "anthony" 500}}}` to output somet
 <picture>
 	<source type="image/webp"
 		srcset="img/srcsets/anthony-2000.webp 2000w, img/srcsets/anthony-1000.webp 1000w, img/srcsets/anthony-500.webp 500w" sizes="100vw" />
-	<img	src="img/srcsets/anthony-500.jpg"
+	<img src="img/srcsets/anthony-500.jpg"
 		srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w" sizes="100vw" />
 </picture>
 ```
