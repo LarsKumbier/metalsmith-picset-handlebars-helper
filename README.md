@@ -73,11 +73,9 @@ Generates `<picture>` elements with:
 
 ### Philosophy
 
-[Convention over Configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)
-
+* [Convention over Configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)
+* Simple case of resizing only (artistic decisions not thought through for this)
 * Give the browser all availble choices
-* Simple case of resizing only (not artistic decisions)
- * No implementation for `size="..."`, though it could be added to this later
 * Reduce bandwidth bloat and keep high quality:
  1. `.webp` is first choice
  1. Responsive size is first choice
