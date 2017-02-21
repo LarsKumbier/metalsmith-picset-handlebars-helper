@@ -19,15 +19,17 @@ Metalsmith(__dirname)
 Assume
 
  * You have a **handlebars** package installed somewhere either directly or as a sub-dependency (We use that same version / install)
- * `/img/picset/anthony_80webp_90jpg_2000,1000,500,250,125w.jpg` as a 2000px wide 90% quality photo
+ * `/img/picset/anthony_80webp_90jpg_2000,1000,500w.jpg` as a 2000px wide 90% quality photo
  * [metalsmith-picset-generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) is used earlier in your metalsmith pipeline
 
 Then use the handlebars helper like `{{{picset "anthony" 500}}}` to output something like
 
 ```html
 <picture>
-	<source type="image/webp" srcset="img/srcsets/anthony-2000.webp 2000w, img/srcsets/anthony-1000.webp 1000w, img/srcsets/anthony-500.webp 500w, img/srcsets/anthony-250.webp 250w, img/srcsets/anthony-125.webp 125w" sizes="100vw" />
-	<img src="img/srcsets/anthony-500.jpg" srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w, img/srcsets/anthony-250.jpg 250w, img/srcsts/anthony-125.jpg 125w" sizes="100vw" />
+	<source type="image/webp"
+		srcset="img/srcsets/anthony-2000.webp 2000w, img/srcsets/anthony-1000.webp 1000w, img/srcsets/anthony-500.webp 500w" sizes="100vw" />
+	<img	src="img/srcsets/anthony-500.jpg"
+		srcset="img/srcsets/anthony-2000.jpg 2000w, img/srcsets/anthony-1000.jpg 1000w, img/srcsets/anthony-500.jpg 500w" sizes="100vw" />
 </picture>
 ```
 ## Specification
