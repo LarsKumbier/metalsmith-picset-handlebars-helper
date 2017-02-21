@@ -71,6 +71,7 @@ module.exports = (options) => {
 			if (!picset) {
 				throw new Error(`Couldn't find picset "${name}". Is it in ${opts.path}?`)
 			}
+			// Default sizes for validation
 			if (!sizes) {
 				sizes="100vw"
 			}
