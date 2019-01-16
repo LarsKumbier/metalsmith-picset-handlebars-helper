@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper#readme",
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "shrinkwrap": "^0.4.0"
   }
 }
